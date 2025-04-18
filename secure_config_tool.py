@@ -41,8 +41,8 @@ def encrypt_config(key, output_dir, sample=False):
             json.dump(config, jf, indent=4)
         print(f"✍️ Sample config written to {config_path_plain}")
     else:
-        with open(config_path_plain, "w") as jf:
-            json.dump(config, jf)
+        #with open(config_path_plain, "w") as jf:
+          #  json.dump(config, jf)
 
         fernet = Fernet(key)
         with open(config_path_plain, "rb") as jf:
